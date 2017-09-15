@@ -48,6 +48,18 @@ public class Box <T>
     isFull = false;
     return junk;
   }
+  /*
+  *@return if the if the box had something in it return false else true
+  */
+  public boolean fill(T item)
+  {
+  	if(full)
+  		return false;
+  		
+  	contents = item;
+  	isFull = true;
+  	return true;
+  }
 
   public String toString()
   {
@@ -63,12 +75,15 @@ public class Box <T>
     // Make two boxes
     Box<String> stringBox = new Box<String>();
     //TODO start the second box with contents inside
-    Box<Integer> intBox   = new Box<Integer>();
+    Box<Integer> intBox   = new Box<Integer>(666);
+    
 
     // View contents (via toString method)
     System.out.println("The boxes contain: " + stringBox + ", " + intBox);
 
     //TODO Add something to a box
+    stringBox.putInBox("The Devil is alive");
+    
 
 
 
