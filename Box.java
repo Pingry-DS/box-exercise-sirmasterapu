@@ -39,7 +39,8 @@ public class Box <T>
   }
 
   /**
-   * Empty out the box, and give back hatever was in it
+   * Empty out the box, and give back whatever was in it
+   *@return what was in the box
    */
   public T empty()
   {
@@ -53,14 +54,16 @@ public class Box <T>
   */
   public boolean fill(T item)
   {
-  	if(full)
+  	if(isFull())
   		return false;
-  		
+
   	contents = item;
   	isFull = true;
   	return true;
   }
-
+  /*
+  *@return what the box contains or if it was empty
+  */
   public String toString()
   {
     if(isFull())
@@ -76,14 +79,14 @@ public class Box <T>
     Box<String> stringBox = new Box<String>();
     //TODO start the second box with contents inside
     Box<Integer> intBox   = new Box<Integer>(666);
-    
+
 
     // View contents (via toString method)
     System.out.println("The boxes contain: " + stringBox + ", " + intBox);
 
     //TODO Add something to a box
-    stringBox.putInBox("The Devil is alive");
-    
+    stringBox.fill("The Devil is alive");
+
 
 
 
@@ -97,7 +100,7 @@ public class Box <T>
     System.out.println("The boxes contain: " + stringBox + ", " + intBox);
 
     //TODO Empty a boxes
-
+    intBox.empty();
 
 
     // View contents (via toString method)
