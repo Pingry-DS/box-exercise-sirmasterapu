@@ -24,7 +24,7 @@ public class Box <T>
    * Check the contents of the box
    *@return Whatever is in the box
    */
-  public  T getContents()
+  public T getContents()
   {
     return contents;
   }
@@ -94,6 +94,7 @@ public class Box <T>
     System.out.println("The boxes contain: " + stringBox + ", " + intBox);
 
     //TODO Test your peek method
+    System.out.println(stringBox.getContents());
 
 
     // View contents (via toString method)

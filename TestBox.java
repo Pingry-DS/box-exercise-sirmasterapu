@@ -4,6 +4,7 @@
 // static import gives us access to assert methods without class name/
 import static org.junit.Assert.*;
 import org.junit.Test;
+import org.junit.Before;
 
 public class TestBox {
 
